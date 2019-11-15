@@ -23,6 +23,7 @@ import { AngularFirestoreModule, AngularFirestore } from '@angular/fire/firestor
 import { InisesComponent } from './autenticacion/inises/inises.component';
 import { GuardService } from './servicios/guard.service';
 import { EditproveeComponent } from './proveedores/editprovee/editprovee.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -60,7 +61,8 @@ const routes: Routes = [
     HttpClientModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    NgxPaginationModule
   ],
   providers: [ProveedoresService, PresupuestosService, AutenticacionService, GuardService],
   bootstrap: [AppComponent]

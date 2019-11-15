@@ -7,8 +7,7 @@ import { ProveedoresService } from '../../servicios/proveedores.service';
   styleUrls: ['./proveedores.component.css']
 })
 export class ProveedoresComponent implements OnInit {
-
-  mensaje: string;
+  paginaActual: number = 1;
   proveedores: any[] = [];
 
   constructor(private proveedoresService: ProveedoresService) {
